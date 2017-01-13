@@ -8,7 +8,7 @@
 		<!-- Database connection settings -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/graininsects</property>
-		<property name="connection.username">root</property>
+		<property name="connection.username">admin1</property>
 		<property name="connection.password">123456</property>
 		
 		<!-- JDBC connection pool (use the built-in) -->
@@ -26,12 +26,12 @@
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
 
-		<property name="format_sql">true</property> 
+		<property name="format_sql">false</property> 
 		
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">update</property>
 		<mapping resource="com/location/entity/Device_info.hbm.xml" />
 		<mapping resource="com/location/entity/Device_info_history.hbm.xml" />
-		<mapping resource="com/location/entity/User_device.hbm.xml" />
+		<mapping resource="com/location/entity/Device.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

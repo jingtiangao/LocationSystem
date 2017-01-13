@@ -17,6 +17,7 @@ public class GroupInfo implements java.io.Serializable {
 	private int groupId;
 	private String groupName;
 	private int maxDistance;
+	private int createtime;//add by gxz 2016/12/09
 
 	public GroupInfo() {
 	}
@@ -54,6 +55,14 @@ public class GroupInfo implements java.io.Serializable {
 
 	public void setMaxDistance(int maxDistance) {
 		this.maxDistance = maxDistance;
+	}
+	@Column(name = "createtime", nullable = false)
+	public int getCreatetime() {
+		return createtime;
+	}
+
+	public void setCreatetime(int createtime) {
+		this.createtime = createtime;
 	}
 
 }

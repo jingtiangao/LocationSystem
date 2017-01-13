@@ -15,9 +15,11 @@ public class UserInfo implements Serializable{
 	private String user_name;
 	private double stop_time;
 	private double start_time;
+	private int state;
 	private int device_id;
 	private int group_id;
 	private int region_id;	
+	private String user_head;
 	@Id
 	@Column(name="user_id",unique=true,nullable=false)
 	public int getUser_id() {
@@ -74,6 +76,20 @@ public class UserInfo implements Serializable{
 	}
 	public void setRegion_id(int region_id) {
 		this.region_id = region_id;
+	}
+	@Column(name="head_image")
+	public String getUser_head() {
+		return user_head;
+	}
+	public void setUser_head(String user_head) {
+		this.user_head = user_head;
+	}
+	@Column(name="state")
+	public int getState() {
+		return state;
+	}
+	public void setState(int state) {
+		this.state = state;
 	}
 	
 
